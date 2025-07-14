@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>NexusBank AI Loan Prediction</title>
+ <link rel="stylesheet" href="static/css/styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ <div class="animated-bg"></div>
+ <header class="main-header">
+   <div class="logo-container" style="display: flex; align-items: flex-start; justify-content: flex-start; margin: 0; padding: 0; width: 100%;">
+     <img src="static/images/3.png" alt="NexusBank AI Logo" class="logo" style="margin: 0; padding: 0; display: block;">
+   </div>
+   <div class="header-container">
+     <!-- Additional header content can go here -->
+   </div>
+ </header>
+ <main class="main-content">
+   <div class="glass-card animate__animated animate__fadeInUp">
+     <h2 class="form-title">Loan Prediction System</h2>
+     <p class="form-subtitle">Enter customer details to predict loan approval status</p>
+     <form id="loanForm" action="/predict" method="post" class="prediction-form">
+       <div class="form-grid">
+         <div class="form-group">
+           <label for="Age">Age</label>
+           <input type="number" id="Age" name="Age" value="30" required class="form-input">
+         </div>
+         <div class="form-group">
+           <label for="Gender">Gender</label>
+           <select id="Gender" name="Gender" required class="form-input">
+             <option value="0">Male</option>
+             <option value="1">Female</option>
+           </select>
+         </div>
+         <div class="form-group">
+           <label for="Account Balance">Account Balance ($)</label>
+           <input type="number" step="0.01" id="Account Balance" name="Account Balance" value="50000" required class="form-input">
+         </div>
+         <div class="form-group">
+           <label for="Transaction Amount">Transaction Amount ($)</label>
+           <input type="number" step="0.01" id="Transaction Amount" name="Transaction Amount" value="1500" required class="form-input">
+         </div>
+         <div class="form-group">
+           <label for="Loan Amount">Loan Amount ($)</label>
+           <input type="number" step="0.01" id="Loan Amount" name="Loan Amount" value="200000" required class="form-input">
+         </div>
+         <div class="form-group">
+           <label for="Interest Rate">Interest Rate (%)</label>
+           <input type="number" step="0.01" id="Interest Rate" name="Interest Rate" value="7.5" required class="form-input">
+         </div>
+         <div class="form-group">
+           <label for="Loan Term">Loan Term (months)</label>
+           <input type="number" id="Loan Term" name="Loan Term" value="60" required class="form-input">
+         </div>
+       </div>
+       <div class="form-actions">
+         <button type="submit" class="submit-btn animate__animated animate__pulse animate__infinite">
+           <i class="fas fa-calculator"></i> Predict Now
+         </button>
+       </div>
+     </form>
+   </div>
+ </main>
+ <footer class="main-footer">
+   <div class="footer-container" style="justify-content: center; text-align: center;">
+     <div style="width: 100%;">
+       Powered By Aravind Suresh.
+     </div>
+   </div>
+ </footer>
+ <script src="static/js/animations.js"></script>
+</body>
+</html>

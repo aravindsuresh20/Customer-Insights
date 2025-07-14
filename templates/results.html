@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Prediction Result  AI</title>
+ <link rel="stylesheet" href="static/css/styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ <div class="animated-bg"></div>
+ <header class="main-header">
+   <div class="logo-container" style="display: flex; align-items: flex-start; justify-content: flex-start; margin: 0; padding: 0; width: 100%;">
+     <img src="static/images/3.png" alt="NexusBank AI Logo" class="logo" style="margin: 0; padding: 0; display: block;">
+   </div>
+   
+   </div>
+ </header>
+ <main class="main-content">
+   <div class="result-card animate__animated animate__zoomIn">
+     <div class="result-icon">
+       {% if prediction == 'Approved' %}
+       <i class="fas fa-check-circle approved animate__animated animate__tada"></i>
+       {% elif prediction == 'Rejected' %}
+       <i class="fas fa-times-circle rejected animate__animated animate__shakeX"></i>
+       {% else %}
+       <i class="fas fa-info-circle other animate__animated animate__pulse"></i>
+       {% endif %}
+     </div>
+     <h2 class="result-title">Loan Status Prediction</h2>
+     <div class="result-status {{ 'approved' if prediction == 'Approved' else 'rejected' if prediction == 'Rejected' else 'other' }}">
+       {{ prediction }}
+     </div>
+     <div class="result-details">
+       <p>The AI model has analyzed the customer data and predicted this loan status.</p>
+       <p>For more information, please contact our loan department.</p>
+     </div>
+     <div class="result-actions">
+       <a href="/download_result?result={{ prediction }}" class="save-btn animate__animated animate__fadeInRight">
+         <i class="fas fa-save"></i> Save Result
+       </a>
+       <a href="/" class="back-btn animate__animated animate__fadeInLeft">
+         <i class="fas fa-arrow-left"></i> New Prediction
+       </a>
+     </div>
+   </div>
+ </main>
+ <footer class="main-footer">
+   <div class="footer-container" style="justify-content: center; text-align: center;">
+     <div style="width: 100%;">
+       Powered By Aravind Suresh.
+     </div>
+   </div>
+ </footer>
+ <script src="static/js/animations.js"></script>
+</body>
+</html>
