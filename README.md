@@ -30,7 +30,8 @@ Installation
 Bash
 git clone [https://github.com/yourusername/loan-approval-prediction.git](https://github.com/yourusername/loan-approval-prediction.git)
 cd loan-approval-prediction
-2.	Place your dataset: Ensure your dataset, named Comprehensive_Banking_Database.csv, is in the same directory as app.py and model.py.
+2.	Place your dataset: Ensure your dataset, named Comprehensive_Banking_Database.csv,
+is in the same directory as app.py and model.py.
 3.	Set up a virtual environment (optional but recommended):
 Bash
 python -m venv venv
@@ -41,7 +42,8 @@ pip install -r requirements.txt
 5.	Run the model training script (to generate loan_approval_model.pkl):
 Bash
 python model.py
-This script trains the RandomForestClassifier and saves the trained model as loan_approval_model.pkl. It also prints the accuracy and classification report of the model.
+This script trains the RandomForestClassifier and saves the trained model as loan_approval_model.pkl.
+It also prints the accuracy and classification report of the model.
 6.	Run the Flask app:
 Bash
 python app.py
