@@ -62,7 +62,8 @@ Project Structure
 │── requirements.txt                 # Python dependencies
 │── README.md                        # Project documentation
 Usage
-1.	Backend EDA: When app.py starts, it will automatically perform an exploratory data analysis (EDA) on the Comprehensive_Banking_Database.csv and save a summary in eda_summary.txt. This file will contain summary statistics, missing values, and the correlation matrix of the numerical features.
+1.	Backend EDA: When app.py starts, it will automatically perform an exploratory data analysis (EDA) on the Comprehensive_Banking_Database.csv and save a summary in eda_summary.txt.
+This file will contain summary statistics, missing values, and the correlation matrix of the numerical features.
 2.	Access the Home Page: Open your web browser and go to http://127.0.0.1:5000. You will see a form to input various banking details.
 3.	Enter Loan Details: Fill in the required fields such as Age, Gender, Account Balance, Transaction Amount, Loan Amount, Interest Rate, and Loan Term.
 4.	Get Prediction: Click the "Predict Loan Status" button. The application will use the trained model to predict the loan approval status.
